@@ -1,12 +1,7 @@
 <template>
   <div class="container max-w-screen-xl mx-auto px-4">
     <div v-if="cartItemsTotal === 0" class="flex flex-row justify-between items-center p-8 shadow-lg mt-5">
-      <div class="flex items-center gap-2">
-        <div class="bg-blue-200 p-4 rounded-full">
-          <Icon name="material-symbols:remove-shopping-cart" size="2em" color="blue"></Icon>
-        </div>
-        <h4 class="font-semibold text-xl"> Sepetinizde Ürün bulunmamaktadır</h4>
-      </div>
+      <h4 class="font-semibold text-xl"> Sepetinizde Ürün bulunmamaktadır</h4>
       <NuxtLink to="/" class="bg-blue-400 px-10 py-3 rounded text-gray-50 font-semibold text-xl">Alışverişe Başla
       </NuxtLink>
     </div>
@@ -92,8 +87,8 @@
         <div class="border-t mt-8">
           <div class="flex font-semibold justify-between py-6 text-sm uppercase">
             <span>Toplam</span>
-            <span v-if="cartTotal > 100">${{ cartTotal + 10 }}</span>
-            <span v-else>${{ cartTotal }}</span>
+            <span v-if="cartTotal > 100">${{ cartTotal }}</span>
+            <span v-else>${{ cartTotal + 10 }}</span>
           </div>
           <button class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
             Sepeti Onayla

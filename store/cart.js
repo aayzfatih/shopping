@@ -22,10 +22,6 @@ export const useCartStore = defineStore("cart", {
       this.$patch({ items });
       localStorage.setItem("cart", JSON.stringify(this.items));
     },
-    setQuantity(items) {
-      this.$patch(this.quantity);
-      localStorage.setItem("quantity", JSON.stringify(this.quantity));
-    },
   },
   getters: {
     getCartItems: (state) => state.items,
